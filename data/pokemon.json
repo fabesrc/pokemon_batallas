@@ -1,0 +1,44 @@
+[
+  {
+    "especie": "charmander",
+    "tipos": ["Fuego"],
+    "ataque_base": 52,
+    "defensa_base": 43,
+    "velocidad_base": 65
+  },
+  {
+    "especie": "squirtle",
+    "tipos": ["Agua"],
+    "ataque_base": 48,
+    "defensa_base": 65,
+    "velocidad_base": 43
+  },
+  {
+    "especie": "bulbasaur",
+    "tipos": ["Planta"],
+    "ataque_base": 49,
+    "defensa_base": 49,
+    "velocidad_base": 45
+  },
+  {
+    "especie": "pikachu",
+    "tipos": ["Electrico"],
+    "ataque_base": 55,
+    "defensa_base": 40,
+    "velocidad_base": 90
+  },
+  {
+    "especie": "geodude",
+    "tipos": ["Roca", "Tierra"],
+    "ataque_base": 80,
+    "defensa_base": 100,
+    "velocidad_base": 20
+  },
+  {
+    "especie": "pidgey",
+    "tipos": ["Volador"],
+    "ataque_base": 45,
+    "defensa_base": 40,
+    "velocidad_base": 56
+  }
+]

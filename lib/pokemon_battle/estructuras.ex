@@ -1,6 +1,6 @@
 defmodule PokemonBattle.Estructuras do
 
-  # ── Instancia de un Pokémon en el inventario de un entrenador ──
+  # Instancia de un Pokémon en el inventario de un entrenador
   defmodule Pokemon do
     defstruct [
       :id,
@@ -68,7 +68,7 @@ defmodule PokemonBattle.Estructuras do
     defstruct [
       :id,
       :tiempo_turno,
-      jugadores: [],          
+      jugadores: [],
       estado: :esperando
     ]
   end

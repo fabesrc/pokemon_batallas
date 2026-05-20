@@ -145,7 +145,7 @@ defmodule PokemonBattle.SistemaSobres do
     :rand.uniform(99999 - 10000 + 1) + 9999
   end
 
-  
+
   defp rango_rareza(:comun), do: {2, 8}
   defp rango_rareza(:raro),  do: {10, 20}
   defp rango_rareza(:epico), do: {25, 40}

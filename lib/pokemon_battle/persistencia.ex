@@ -15,36 +15,35 @@ defmodule PokemonBattle.Persistencia do
   @ruta_tienda       "data/tienda.json"
   @ruta_batallas     "data/battles.log"
 
-  # ──────────────────────────────────────────────
-  # LEER ARCHIVOS
-  # ──────────────────────────────────────────────
-
+  # Leer archivos
   # Lee las especies del catálogo (pokemon.json)
   # Retorna lista de mapas con las stats base
+
   def cargar_especies do
     leer_json(@ruta_especies)
   end
 
   # Lee el pool de movimientos (moves.json)
   # Retorna lista de mapas con nombre, tipo y poder_base
+
   def cargar_movimientos do
     leer_json(@ruta_movimientos)
   end
 
   # Lee los tipos de sobre y probabilidades (tienda.json)
+
   def cargar_tienda do
     leer_json(@ruta_tienda)
   end
 
   # Lee los entrenadores y los convierte en structs
+
   def cargar_entrenadores do
     leer_json(@ruta_entrenadores)
     |> Enum.map(&mapear_entrenador/1)
   end
 
-  # ──────────────────────────────────────────────
-  # GUARDAR ARCHIVOS
-  # ──────────────────────────────────────────────
+  # Guardar archivos
 
   # Guarda la lista de entrenadores en trainers.json
   def guardar_entrenadores(entrenadores) do
@@ -58,10 +57,9 @@ defmodule PokemonBattle.Persistencia do
     File.write!(@ruta_batallas, linea, [:append])
   end
 
-  # ──────────────────────────────────────────────
-  # CONVERSIÓN: JSON → STRUCTS
-  # Convierte mapas crudos del JSON en structs tipados
-  # ──────────────────────────────────────────────
+
+  # Conversion de Json a structs
+
 
   defp mapear_entrenador(mapa) do
     %Entrenador{
@@ -111,10 +109,7 @@ defmodule PokemonBattle.Persistencia do
     }
   end
 
-  # ──────────────────────────────────────────────
-  # CONVERSIÓN: STRUCTS → JSON
-  # Convierte structs en mapas simples para guardar
-  # ──────────────────────────────────────────────
+  # Conversion de Structs a json
 
   defp entrenador_a_mapa(%Entrenador{} = e) do
     %{
@@ -164,9 +159,9 @@ defmodule PokemonBattle.Persistencia do
     }
   end
 
-  # ──────────────────────────────────────────────
-  # PRIVADAS — Lectura y escritura de JSON
-  # ──────────────────────────────────────────────
+
+
+  
 
   defp leer_json(ruta) do
     case File.read(ruta) do
